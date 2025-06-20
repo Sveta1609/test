@@ -1,0 +1,42 @@
+matrix_numbers = matrix_numbers = [[9, 8, 2, 0],
+                                   [9, 3, 5, -1],
+                                   [-5, 4, 6, 2],
+                                   [2, 1, 0, 1]]
+
+
+def get_sum(matrix):
+    sum = 0
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            sum += matrix[i][j]
+    return sum
+print(get_sum(matrix_numbers))
+
+def get_max(matrix):
+    max = matrix[0][0]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] > max:
+                max = matrix[i][j]
+    return max
+print(get_max(matrix_numbers))
+
+
+def get_min(matrix):
+    min = matrix[0][0]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] < min:
+                min = matrix[i][j]
+    return min
+print(get_min(matrix_numbers))
+
+
+def gef_mode(matrix):
+    mode = matrix[0][0]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] == mode:
+                mode = matrix[i][j]
+    return mode
+print(gef_mode(matrix_numbers))
